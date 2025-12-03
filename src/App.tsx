@@ -11,6 +11,8 @@ import DashboardLayout from "./components/admin/DashboardLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import ProductList from "./pages/admin/ProductList";
 import ProductForm from "./pages/admin/ProductForm";
+import Orders from "./pages/admin/Orders";
+import Settings from "./pages/admin/Settings";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
               <Route path="products" element={<ProductList />} />
               <Route path="products/new" element={<ProductForm />} />
               <Route path="products/:id/edit" element={<ProductForm />} />
+              <Route path="orders" element={<Orders />} />
+              <Route path="settings" element={<Settings />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
