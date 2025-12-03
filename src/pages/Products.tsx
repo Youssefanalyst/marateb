@@ -1,6 +1,6 @@
-import ProductCard from './ProductCard';
+import ProductCard from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import product1 from '@/assets/product-1.jpg';
 import product2 from '@/assets/product-2.jpg';
@@ -46,40 +46,42 @@ const products = [
     description: 'طقم مفروشات من القطن المصري الفاخر بألوان هادئة',
     price: 1500,
     originalPrice: 2000,
-    image: product1, // Reusing image for now
+    image: product1,
   },
   {
     id: '6',
     name: 'مرتبة بسمارك سوبر',
     description: 'مرتبة فائقة الجودة بضمان 15 سنة وتهوية متقدمة',
     price: 9500,
-    image: product3, // Reusing image for now
+    image: product3,
     badge: 'حصري',
   },
 ];
 
-const ProductsSection = () => {
+const Products = () => {
   return (
-    <section id="products" className="py-20 bg-background">
+    <div className="min-h-screen bg-background pt-24 pb-16">
       <div className="container mx-auto px-4" dir="rtl">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            منتجاتنا <span className="text-gradient-gold">المميزة</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-            اكتشف تشكيلتنا الواسعة من المراتب والمفروشات الفاخرة
+        {/* Back Button */}
+        <Link to="/">
+          <Button variant="ghost" className="mb-6 gap-2">
+            <ArrowRight className="w-4 h-4" />
+            العودة للرئيسية
+          </Button>
+        </Link>
+
+        {/* Page Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            جميع <span className="text-gradient-gold">المنتجات</span>
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            اكتشف تشكيلتنا الكاملة من المراتب والمفروشات الفاخرة
           </p>
-          <Link to="/products">
-            <Button variant="gold" className="gap-2">
-              عرض جميع المنتجات
-              <ArrowLeft className="w-4 h-4" />
-            </Button>
-          </Link>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map((product, index) => (
             <div
               key={product.id}
@@ -91,8 +93,8 @@ const ProductsSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ProductsSection;
+export default Products;
