@@ -5,20 +5,20 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'اتصل بنا',
-    value: '01234567890',
-    href: 'tel:01234567890',
+    value: '01050206001',
+    href: 'tel:01050206001',
   },
   {
     icon: Mail,
     label: 'البريد الإلكتروني',
-    value: 'info@bismarck.com',
-    href: 'mailto:info@bismarck.com',
+    value: 'info@bismarck-mattresses.com',
+    href: 'mailto:info@bismarck-mattresses.com',
   },
   {
     icon: MapPin,
     label: 'العنوان',
-    value: 'القاهرة، مصر',
-    href: '#',
+    value: 'طريق الأسكندرية القاهرة الزراعى - خورشيد القبلية - الاسكندرية',
+    href: 'https://maps.google.com/?q=خورشيد+القبلية+الاسكندرية',
   },
   {
     icon: Clock,
