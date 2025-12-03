@@ -19,6 +19,10 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { toast } from 'sonner';
+import product1 from '@/assets/product-1.jpg';
+import product2 from '@/assets/product-2.jpg';
+import product3 from '@/assets/product-3.jpg';
+import product4 from '@/assets/product-4.jpg';
 
 const initialProducts = [
   {
@@ -28,7 +32,7 @@ const initialProducts = [
     category: 'مراتب',
     stock: 15,
     status: 'متاح',
-    image: '/placeholder.svg',
+    image: product1,
   },
   {
     id: '2',
@@ -37,7 +41,7 @@ const initialProducts = [
     category: 'أسرّة',
     stock: 8,
     status: 'متاح',
-    image: '/placeholder.svg',
+    image: product2,
   },
   {
     id: '3',
@@ -46,7 +50,7 @@ const initialProducts = [
     category: 'مراتب',
     stock: 20,
     status: 'متاح',
-    image: '/placeholder.svg',
+    image: product3,
   },
   {
     id: '4',
@@ -55,7 +59,7 @@ const initialProducts = [
     category: 'مراتب',
     stock: 0,
     status: 'نفذ',
-    image: '/placeholder.svg',
+    image: product4,
   },
   {
     id: '5',
@@ -64,7 +68,7 @@ const initialProducts = [
     category: 'مفروشات',
     stock: 50,
     status: 'متاح',
-    image: '/placeholder.svg',
+    image: product1,
   },
   {
     id: '6',
@@ -73,7 +77,7 @@ const initialProducts = [
     category: 'مراتب',
     stock: 5,
     status: 'متاح',
-    image: '/placeholder.svg',
+    image: product3,
   },
 ];
 
