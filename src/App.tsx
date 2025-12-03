@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
 import DashboardLayout from "./components/admin/DashboardLayout";
+import Dashboard from "./pages/admin/Dashboard";
 import ProductList from "./pages/admin/ProductList";
 import ProductForm from "./pages/admin/ProductForm";
 
@@ -26,7 +27,7 @@ const App = () => (
 
             {/* Admin Routes */}
             <Route path="/admin" element={<DashboardLayout />}>
-              <Route index element={<ProductList />} />
+              <Route index element={<Dashboard />} />
               <Route path="products" element={<ProductList />} />
               <Route path="products/new" element={<ProductForm />} />
               <Route path="products/:id/edit" element={<ProductForm />} />
